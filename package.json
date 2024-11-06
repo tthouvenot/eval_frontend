@@ -1,0 +1,19 @@
+{
+  "name": "eval_frontend",
+  "version": "1.0.0",
+  "description": "Site pour l'évaluation Front End MNS",
+  "main": "index.js",
+  "scripts": {
+      "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tthouvenot/eval_frontend.git"
+  },
+  "author": "Tristan Thouvenot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tthouvenot/eval_frontend/issues"
+  },
+  "homepage": "https://github.com/tthouvenot/eval_frontend#readme"
+}
