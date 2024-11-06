@@ -2,11 +2,12 @@
 $main-font: "Roboto";
 $title-font: "Lato";
 
-$main-color: yellow;
-$secondary-color: blue;
-$font-color: gray;
-$valid-color: green;
-$error-color: red;
+$main-color: #095256;
+$secondary-color: #00AFB9;
+$backgroug-color: #cecece;
+$font-color: #2C3E50; 
+$valid-color: #27AE60;
+$error-color: #B3001B;
 
 // Reset CSS
 *,
@@ -27,9 +28,82 @@ ol{
     list-style:none;
 }
 
+body{
+    background-color: $backgroug-color;
+    color: $font-color;
+}
+
 /*************
 ***        ***
 *** Navbar ***
 ***        ***
 **************/
 
+.navbar{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $main-color;
+
+    &__logo img {
+        height: 200px;
+        width: 200px;
+        filter: invert(100%);
+    }
+
+    &__search {
+        width: 200px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        &--field {
+            height: 1.8rem;
+            width: 85%;
+            padding: 0.5rem;
+
+            &:focus{
+                outline: none;
+                border: 5px $error-color double;
+                caret-color: $error-color;
+            }
+        }
+        
+        &--logo{
+            color:$backgroug-color;
+        }
+    }
+
+    &__user{
+        width: 150px;
+        margin-right: 2rem;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__basket::before{
+        font-family: "Font Awesome 5 Free";
+        font-weight: 600;
+        content:'\f291';
+        font-size: 2rem;
+        height: 50px;
+        width: 50px;
+        color: $backgroug-color;
+    }
+
+    &__login::before{
+        font-family: "Font Awesome 5 Free";
+        font-weight: 600;
+        content:'\f2f6';
+        font-size: 2rem;
+        height: 50px;
+        width: 50px;
+        color: $backgroug-color;
+    }
+}
