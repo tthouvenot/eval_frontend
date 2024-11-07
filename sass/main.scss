@@ -39,14 +39,19 @@ body{
 ***        ***
 **************/
 
+header{
+    background-color: $main-color;
+}
+
+
 .navbar{
     height: 200px;
-    width: 100%;
+    max-width: 1200px;
+    margin: auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    background-color: $main-color;
 
     &__logo img {
         height: 200px;
@@ -234,6 +239,7 @@ body{
 
 .information{
     max-width: 900px;
+    margin: auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -248,6 +254,28 @@ body{
         width: 100%;
         border-collapse: collapse;
         text-align: center;
+
+        & caption {
+            border: 1px solid black;
+            border-bottom: none;
+            font-style: italic;
+            caption-side: top;
+            padding: 1rem 0;
+            margin-bottom: 0;
+            text-align: center;
+            vertical-align: middle;
+        }
+    
+        & th,
+        & td {
+            width: 25%;
+            border: 1px solid black;
+            padding: 10px;
+        }
+    
+        & th[rowspan] {
+            text-align: center;
+        }
     }
 
     &__shop{
@@ -262,29 +290,4 @@ body{
     &__list{
         list-style: disc;
     }
-}
-
-table {
-}
-
-caption {
-    border: 1px solid black;
-    border-bottom: none;
-    font-style: italic;
-    caption-side: top;
-    padding: 1rem 0;
-    margin-bottom: 0;
-    text-align: center;
-    vertical-align: middle;
-}
-
-th,
-td {
-    width: 25%;
-    border: 1px solid black;
-    padding: 10px;
-}
-
-th[rowspan] {
-    text-align: center;
 }

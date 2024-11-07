@@ -26,14 +26,18 @@ body {
 *** Navbar ***
 ***        ***
 **************/
+header {
+  background-color: #095256;
+}
+
 .navbar {
   height: 200px;
-  width: 100%;
+  max-width: 1200px;
+  margin: auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: #095256;
 }
 .navbar__logo img {
   height: 200px;
@@ -194,6 +198,7 @@ body {
 *******************/
 .information {
   max-width: 900px;
+  margin: auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -208,18 +213,7 @@ body {
   border-collapse: collapse;
   text-align: center;
 }
-.information__shop {
-  width: 20%;
-}
-.information__title {
-  text-wrap: wrap;
-  text-align: center;
-}
-.information__list {
-  list-style: disc;
-}
-
-caption {
+.information__table caption {
   border: 1px solid black;
   border-bottom: none;
   font-style: italic;
@@ -229,16 +223,23 @@ caption {
   text-align: center;
   vertical-align: middle;
 }
-
-th,
-td {
+.information__table th, .information__table td {
   width: 25%;
   border: 1px solid black;
   padding: 10px;
 }
-
-th[rowspan] {
+.information__table th[rowspan] {
   text-align: center;
+}
+.information__shop {
+  width: 20%;
+}
+.information__title {
+  text-wrap: wrap;
+  text-align: center;
+}
+.information__list {
+  list-style: disc;
 }
 
 /*# sourceMappingURL=style.css.map */
