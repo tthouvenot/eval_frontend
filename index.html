@@ -18,8 +18,6 @@
             <img src="./public/image/logo.svg" alt="logo représentant un phoenix">
         </div>
         <div class="navbar__search">
-            <!-- <div class="navbar_search--field">
-            </div> -->
             <input type="search" name="search" id="search__field" class="navbar__search--field">
             <div class="navbar__search--logo"><i class="fa-solid fa-magnifying-glass"></i></div>
         </div>
@@ -28,7 +26,95 @@
             <div class="navbar__login"></div>
         </div>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+        <section class="article">
+            <div class="article__container">
+                <h2 class="article__title">Article 1</h2>
+                <div class="article__image">
+                    <img src="./public/image/image_1.jpg" alt="">
+                </div>
+                <div class="article__image">
+                    <img src="./public/image/image_2.jpg" alt="">
+                </div>
+                <div class="article__image">
+                    <img src="./public/image/image_3.jpg" alt="">
+                </div>
+                <div class="article__image">
+                    <img src="./public/image/image_4.jpg" alt="">
+                </div>
+            </div>
+            <div class="article__container">
+                <h2 class="article__title">Article 2</h2>
+                <div class="article__image">
+                    <img src="./public/image/image_5.jpg" alt="">
+                </div>
+            </div>
+            <div class="article__container">
+                <h2 class="article__title">Article 3</h2>
+                <div class="article__image">
+                    <img src="./public/image/image_6.jpg" alt="">
+                    <!-- TODO: doit être un after -->
+                    <div class="article__rupture">
+                        <p>EN RUPTURE!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="article__container">
+                <h2 class="article__title">Article 4</h2>
+                <div class="article__image">
+                    <img src="./public/image/image_7.jpg" alt="">
+                </div>
+                <!-- TODO: doit être un after -->
+                <div class="article__solde">
+                    <p>SOLDE!</p>
+                </div>
+            </div>
+        </section>
+        <section class="information">
+            <div class="information__price">
+                <table class="information__table">
+                    <caption>Modèles disponibles</caption>
+                    <tbody>
+                        <tr>
+                            <td rowspan="4">Tous les prix sont affichés hors taxes</td>
+                            <td>Modèle</td>
+                            <td>Prix</td>
+                            <td>Online</td>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>10€</td>
+                            <td>oui</td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td>20€</td>
+                            <td>non</td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td colspan="2">En rupture</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="information__shop">
+                <h3 class="information__title">Liste des magasins physiques</h3>
+                <ul class="information__list">
+                    <li>Ville A</li>
+                    <li>Ville B</li>
+                    <li>Ville C</li>
+                    <li>Ville D</li>
+                    <li>Ville E</li>
+                    <li>Ville F</li>
+                    <li>Ville G</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
 </body>
 </html>
