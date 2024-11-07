@@ -30,7 +30,7 @@
     </header>
     <main>
         <section class="article">
-            <div class="article__container">
+            <article class="article__container">
                 <h2 class="article__title">Article 1</h2>
                 <div class="article__image">
                     <img src="./public/image/image_1.jpg" alt="">
@@ -44,33 +44,25 @@
                 <div class="article__image">
                     <img src="./public/image/image_4.jpg" alt="">
                 </div>
-            </div>
-            <div class="article__container">
+            </article>
+            <article class="article__container">
                 <h2 class="article__title">Article 2</h2>
                 <div class="article__image">
                     <img src="./public/image/image_5.jpg" alt="">
                 </div>
-            </div>
-            <div class="article__container">
+            </article>
+            <article class="article__container">
                 <h2 class="article__title">Article 3</h2>
-                <div class="article__image">
+                <div class="article__image article__rupture">
                     <img src="./public/image/image_6.jpg" alt="">
-                    <!-- TODO: doit être un after -->
-                    <div class="article__rupture">
-                        <p>EN RUPTURE!</p>
-                    </div>
                 </div>
-            </div>
-            <div class="article__container">
+            </article>
+            <article class="article__container article__solde">
                 <h2 class="article__title">Article 4</h2>
                 <div class="article__image">
                     <img src="./public/image/image_7.jpg" alt="">
                 </div>
-                <!-- TODO: doit être un after -->
-                <div class="article__solde">
-                    <p>SOLDE!</p>
-                </div>
-            </div>
+            </article>
         </section>
         <section class="information">
             <div class="information__price">
@@ -116,7 +108,28 @@
         </section>
     </main>
     <footer>
-
+        <section class="container">
+            <div class="container__faq">
+                <h3 class="container__faq--title">FAQ</h3>
+                <ul>
+                    <li class="container__faq--question"><a href="#">Première question</a></li>
+                    <li class="container__faq--question"><a href="#">Deuxième question</a></li>
+                    <li class="container__faq--question"><a href="#">Troisième question</a></li>
+                </ul>
+            </div>
+            <div class="container__legal">
+                <ul>
+                    <li><a href="#">Conditions générales de ventes</a></li>
+                    <li><a href="#">Vos données personnelles</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </div>
+            <div class="container__social">
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="container__facebook"><p>Facebook</p><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="container__instagram"><p>Instagram</p><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </section>
     </footer>
 </body>
 </html>

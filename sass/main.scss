@@ -9,6 +9,8 @@ $font-color: #2C3E50;
 $valid-color: #27AE60;
 $error-color: #B3001B;
 
+$tablet: 768px;
+
 // Reset CSS
 *,
 *::after,
@@ -130,7 +132,8 @@ header{
 
     &__container {
         height: 400px;
-        width: 400px;
+        // max-width: 400px;
+        width:45%;
         display: flex;
         flex-flow: column;
         justify-content: center;
@@ -195,7 +198,8 @@ header{
 
     }
 
-    &__rupture{
+    &__rupture::after{
+        content:'En rupture!';
         position: absolute;
         top: 0;
         left: 0;
@@ -215,7 +219,8 @@ header{
         border: 1px solid rgba(44, 62, 80, 0.31);
     }
 
-    &__solde{
+    &__solde::after{
+        content:'Solde!';
         height: 100px;
         width: 100px;
         border-radius: 50%;
@@ -280,14 +285,165 @@ header{
 
     &__shop{
         width: 20%;
+
+
     }
 
     &__title{
         text-wrap: wrap;
         text-align: center;
+        margin-bottom: 1rem;
     }
 
     &__list{
         list-style: disc;
     }
+}
+
+/*************
+***        ***
+*** footer ***
+***        ***
+**************/
+
+footer{
+    background-color: $main-color;
+    width: 100%;
+}
+
+.container{
+    height: 175px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 4rem;
+    padding: 2rem;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    color:$backgroug-color;
+    
+    & a{
+        color:$backgroug-color;
+        cursor: pointer;
+    }
+    
+    &__faq{
+        padding: 0.5rem;
+        flex: 1 1 0;
+        border: solid red 1px;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: start;
+                
+        &--title{
+            align-self: center;
+            background-color: brown;
+            text-align: center;
+        }
+
+        &--question{
+            margin-bottom: 0.25rem;
+        }
+    }
+    
+    &__legal{
+        padding: 0.5rem;
+        flex: 1 1 0;
+        border: solid red 1px;
+        height: 100%;
+    }
+    
+    &__social{
+        padding: 0.5rem;
+        flex: 1 1 0;
+        height: 100%;
+        border: solid red 1px;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+        flex: 1 1 0;
+        gap: 1rem;
+        
+        & a{
+            cursor: pointer;
+        }
+
+    }
+    
+    &__facebook i, &__instagram i{
+        display: none;
+    }
+
+}
+
+/*****************
+***            ***
+*** Responsive ***
+***            ***
+******************/
+
+@media (max-width: $tablet) {
+
+    .article {
+        flex-flow: column;
+        gap: 2rem;
+        margin: 2rem 2rem;
+
+        &__container {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .information{
+
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+
+        &__shop {
+            display: none;
+        }
+    }
+
+    .container {
+        margin-top: 2rem;
+        padding: 1rem;
+        gap: 1rem;
+
+        &__faq {
+            flex: 1 1 0;
+            padding: 0.5rem;
+        }
+
+        &__legal {
+            flex: 1 1 35%;
+            padding: 0.5rem;
+        }
+
+        &__social {
+            flex: 1 1 0;
+            justify-content: center;
+            padding: 0.5rem;
+        }
+
+        &__facebook p, &__instagram p{
+            display: none;
+        }
+
+        &__facebook i{
+            display: inline-block;
+        }
+
+        &__instagram i{
+            display: inline-block;
+        }
+
+    }
+
 }

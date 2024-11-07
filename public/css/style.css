@@ -107,7 +107,7 @@ header {
 }
 .article__container {
   height: 400px;
-  width: 400px;
+  width: 45%;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -158,7 +158,8 @@ header {
   width: 100%;
   object-fit: cover;
 }
-.article__rupture {
+.article__rupture::after {
+  content: "En rupture!";
   position: absolute;
   top: 0;
   left: 0;
@@ -177,7 +178,8 @@ header {
   -webkit-backdrop-filter: blur(3px);
   border: 1px solid rgba(44, 62, 80, 0.31);
 }
-.article__solde {
+.article__solde::after {
+  content: "Solde!";
   height: 100px;
   width: 100px;
   border-radius: 50%;
@@ -237,9 +239,132 @@ header {
 .information__title {
   text-wrap: wrap;
   text-align: center;
+  margin-bottom: 1rem;
 }
 .information__list {
   list-style: disc;
+}
+
+/*************
+***        ***
+*** footer ***
+***        ***
+**************/
+footer {
+  background-color: #095256;
+  width: 100%;
+}
+
+.container {
+  height: 175px;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 4rem;
+  padding: 2rem;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  color: #cecece;
+}
+.container a {
+  color: #cecece;
+  cursor: pointer;
+}
+.container__faq {
+  padding: 0.5rem;
+  flex: 1 1 0;
+  border: solid red 1px;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: start;
+}
+.container__faq--title {
+  align-self: center;
+  background-color: brown;
+  text-align: center;
+}
+.container__faq--question {
+  margin-bottom: 0.25rem;
+}
+.container__legal {
+  padding: 0.5rem;
+  flex: 1 1 0;
+  border: solid red 1px;
+  height: 100%;
+}
+.container__social {
+  padding: 0.5rem;
+  flex: 1 1 0;
+  height: 100%;
+  border: solid red 1px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 1 0;
+  gap: 1rem;
+}
+.container__social a {
+  cursor: pointer;
+}
+.container__facebook i, .container__instagram i {
+  display: none;
+}
+
+/*****************
+***            ***
+*** Responsive ***
+***            ***
+******************/
+@media (max-width: 768px) {
+  .article {
+    flex-flow: column;
+    gap: 2rem;
+    margin: 2rem 2rem;
+  }
+  .article__container {
+    width: 100%;
+    height: auto;
+  }
+  .information {
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+  }
+  .information__shop {
+    display: none;
+  }
+  .container {
+    margin-top: 2rem;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .container__faq {
+    flex: 1 1 0;
+    padding: 0.5rem;
+  }
+  .container__legal {
+    flex: 1 1 35%;
+    padding: 0.5rem;
+  }
+  .container__social {
+    flex: 1 1 0;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+  .container__facebook p, .container__instagram p {
+    display: none;
+  }
+  .container__facebook i {
+    display: inline-block;
+  }
+  .container__instagram i {
+    display: inline-block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
